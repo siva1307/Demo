@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+        <table class="list" id="studentList">
+                <thead>
+                    <tr >
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>CLASS</th>
+                        <th>ENROLL</th>
+                        <th>CITY</th>
+                        <th>COUNTRY</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>ravi</td>
+                        <td>ravi@123.com</td>
+                        <td>B.tech</td>
+                        <td>2016</td>
+                        <td>Chennai</td>
+                        <td>India</td>
+                        <td><button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button></td>
+                        
+                        
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>madhu kiran</td>
+                        <td>madhu@gmail.com</td>
+                        <td>MBA</td>
+                        <td>2014</td>
+                        <td>Hyderabad</td>
+                        <td>India</td>
+                        <td><button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button></td>
+                        
+                        
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>sravya</td>
+                        <td>srav99@yahoo.com</td>
+                        <td>M.tech</td>
+                        <td>2015</td>
+                        <td>Bangalore</td>
+                        <td>India</td>
+                        <td><button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button></td>
+                        
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+    <table>
+        
+            
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                    <table id="tbl">
+                        <tr>
+                    <td>
+                        <label>STUDENT ID*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                    </td>
+                       <td> <input type="text" name="sid" id="sid" style="width: 250px"></td>
+                    <tr>
+                    <tr>
+                      <td><label>STUDENT NAME</label></td>  
+                       <td><input type="text" name="sname" id="sname" style="width: 250px"></td> 
+                    </tr>
+                    <tr>
+                      <td><label>EMAIL</label></td>  
+                       <td><input type="text" name="mail" id="mail" style="width: 250px"></td> 
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>CLASS</label></td>
+                       <td><input type="text" name="lass" id="lass" style="width: 250px"></td> 
+                    </tr>
+                
+                  <tr> 
+                      <td><label>ENROLLEMENT YEAR</label></td>  
+                       <td><input type="text" name="enroll" id="enroll" style="width: 250px"></td> 
+                    
+                    </tr> 
+                    <tr>
+                       <td><label>CITY</label></td> 
+                       <td><input type="text" name="city" id="city" style="width: 250px"></td> 
+                    </tr>
+                    <tr>
+                      <td><label>COUNTRY</label></td>  
+                      <td><input type="text" name="country" id="country" style="width: 250px"></td>  
+                    </tr>
+                   
+                    <!-- <span  class="form-action-buttons">
+                       
+                    </span> -->
+                
+                </table>
+                <tr>
+                        <input type="submit" value="Save">
+                        <input type="reset" value="Reset">
+
+                </tr>
+            </div>
+                </form>
+            
+            
+               
+        
+        
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
